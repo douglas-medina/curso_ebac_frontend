@@ -29,4 +29,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less'); //compacta o less
     grunt.loadNpmTasks('grunt-contrib-uglify');  //comprime js
     
+    grunt.registerTask('default', ['less:development', 'uglify']);
+    grunt.registerTask('build', ['less:production', 'uglify']);
 }
